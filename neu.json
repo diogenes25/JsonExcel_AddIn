@@ -1,0 +1,1899 @@
+{
+  "passenger": {
+    "message": {
+      "id_document": {
+        "error": "Kann Dokumente nicht laden"
+      },
+      "save": {
+        "success": "Passenger data was saved!",
+        "error": "Cannot save passenger!",
+        "outward_first": "Outward trip's data need to be filled in!"
+      },
+      "mismatch": {
+        "any": "The data you scanned is different from information entered previously.",
+        "check": " Please check the details highlighted below."
+      },
+      "error": "Cannot load passengers!"
+    },
+    "label": {
+      "add_owner": "Add owner",
+      "edit_owner": "Edit owner",
+      "passengers": "Passengers",
+      "passenger": "Passenger",
+      "no": "No.",
+      "passenger_data": "Passenger data",
+      "vehicle_data": "Vehicle data",
+      "personal_information": "Personal Information",
+      "email": "Email address",
+      "mobile_phone": "Mobile phone",
+      "contact": "Contact",
+      "country_of_residence": "Country of residence",
+      "state": "State",
+      "city": "City",
+      "zip_code": "Zip Code",
+      "address_line": "Address line",
+      "address": "Address",
+      "id_expiration_date": "ID Expiration date",
+      "id_number": "ID Number",
+      "id_issuing_country": "ID Issuing Country",
+      "id_type": "ID Type",
+      "nationality": "Nationality",
+      "date_of_birth": "Date of birth",
+      "first_name": "First name",
+      "middle_name": "Middle name",
+      "first_last_name": "First last name",
+      "second_last_name": "Second last name",
+      "scan_document": "Scan document",
+      "go_to_payment": "Go to payment",
+      "less_info": "Less info",
+      "more_info": "More info",
+      "outward_route": "Outward route",
+      "name": "Passenger name",
+      "add_vehicle": "Add vehicle",
+      "return_route": "Return route",
+      "personal_number": "DNI/NIE/NP",
+      "verifyAll": "Verify all residents",
+      "gender": {
+        "title": "Gender",
+        "M": "M",
+        "F": "F"
+      }
+    },
+    "tooltip": {
+      "form_invalid": "Some necessary fields in form are empty",
+      "not_paid": "The ticket is not settled",
+      "ticket_invalid": "Ticket expired",
+      "default": "Reason is unknown",
+      "certificateDataInvalid": "Some necessary fields in subsidy data are empty."
+    },
+    "subsidy": {
+      "label": {
+        "subsidyData": "Subsidy data",
+        "certificateNumber": "Certificate number",
+        "validTo": "Valid to",
+        "searchForCertificates": "Search for certificates"
+      },
+      "tooltip": {
+        "verifyResidentButton": "First name', 'First last name' and 'DNI/NIE/NP' can not be empty.",
+        "findCertificatesButton": "DNI/NIE/NP' can not be empty"
+      },
+      "message": {
+        "success": {
+          "verificationSuccess": "Resident verified successfully",
+          "certificatesFounded": "Certificates loaded successfully"
+        },
+        "error": {
+          "invalidPersonalNumber": "Invalid DNI/NIE/NP format",
+          "verificationError": "Unable to verify passenger",
+          "verificationFailed": "Verification failed",
+          "noCertificates": "No certificates found",
+          "errorLoadingCertificates": "Unable to loaded certificates. Please provide data manually"
+        }
+      },
+      "resident": {
+        "label": {
+          "residentData": "Resident data",
+          "manualVerification": "Unable to verify the data. Please provide the following information.",
+          "saraVerificationSuccessful": "Resident verified successfully"
+        },
+        "button": {
+          "verify": "Verify resident"
+        }
+      },
+      "family": {
+        "label": {
+          "familyData": "Family data"
+        }
+      },
+      "military": {
+        "label": {
+          "militaryData": "{{subsidyName}} data",
+          "cardNumber": "Card number"
+        }
+      },
+      "modal": {
+        "header": "Document confirmation",
+        "no": "No, I don't confirm",
+        "yes": "Yes, I confirm",
+        "body1": "Please confirm that You have a copy of the ",
+        "body2": " for "
+      }
+    }
+  },
+  "vehicle": {
+    "message": {
+      "save": {
+        "success": "Vehicle data was saved!",
+        "error": "Cannot save vehicle!"
+      },
+      "error": "Cannot load Vehicle!",
+      "save_passengers": "Please, save all passengers from the route first."
+    },
+    "label": {
+      "vehicles": "Vehicles",
+      "type": "Type",
+      "make": "Make",
+      "model": "Model",
+      "license_plate": "License plate",
+      "length": "Length",
+      "carData": "Car data",
+      "trailer_data": "Trailer data",
+      "license_plate_number": "License plate number",
+      "driver": "Driver",
+      "lengthUnit": "m",
+      "noDriversForVehicle": "No drivers available for this vehicle."
+    }
+  },
+  "shift": {
+    "header": "Shift management",
+    "supervisor_team_header": "My team's shifts",
+    "open_shifts": {
+      "title": "Open shifts",
+      "no_shifts": "There are no open shifts available"
+    },
+    "closed_shifts": {
+      "title": "Closed shifts",
+      "no_shifts": "There are no closed shifts available"
+    },
+    "message": {
+      "cashbox_mismatch": "Provided amount doesn't match the amount at the shift closure.",
+      "add_to_cashbox": "Please insert %0.2f %s into %s. ",
+      "take_from_cashbox": "Please take %0.2f %s out from the %s. ",
+      "open": {
+        "success": "Shift is open!",
+        "error": "Shift open unsuccessful!",
+        "cashboxgroupalreadyopen": "Cashbox group is already open"
+      },
+      "close": {
+        "success": "Shift is close!",
+        "error": "Shift close unsuccessful!"
+      },
+      "status": {
+        "error": "Unable to fetch current shift status."
+      },
+      "add_cash": {
+        "success": "Cashbox amount increase succeeded.",
+        "error": "Cashbox amount increase failed."
+      },
+      "withdraw": {
+        "success": "Cashbox withdrawal succeeded.",
+        "error": "Cashbox withdrawal failed.",
+        "amount_exceeded": "Cashbox amount exceeded - please reduce amount to withdraw."
+      }
+    },
+    "no_cashbox_group": "No cashbox group",
+    "button": {
+      "open": "Open Shift",
+      "close": "Close Shift",
+      "withdraw_cash": "Withdraw cash",
+      "add_cash": "Add cash",
+      "view_cashbox_log": "View cashbox log",
+      "view_shift_report": "View shift report"
+    },
+    "withdraw_type": {
+      "label": "Withdraw type",
+      "bank": "Bank deposit",
+      "cash": "Cash withdraw"
+    },
+    "modal_title": {
+      "open": "Open Shift",
+      "close": "Close Shift",
+      "withdraw_cash": "Withdraw cash",
+      "add_cash": "Add cash"
+    },
+    "status": {
+      "open": "Open",
+      "close": "Close"
+    },
+    "companies": "Companies",
+    "users": "Users",
+    "team_shift_status": "Status",
+    "opened_by": "Opened by",
+    "closed_by": "Closed by",
+    "closed_by_template": "%s on %s",
+    "opened_by_template": "%s on %s"
+  },
+  "booking": {
+    "button": {
+      "add_owner": "Add owner",
+      "edit_owner": "Edit owner",
+      "reset": "Reset selection",
+      "add": "Add to booking",
+      "confirm": "Confirm booking",
+      "delete": "Delete booking",
+      "route": {
+        "one_way": "One way"
+      }
+    },
+    "return": {
+      "route": "Return route",
+      "date": "Return date"
+    },
+    "outward": {
+      "route": "Outward route",
+      "date": "Outward date"
+    },
+    "label": {
+      "bookingDetails": "Booking Details",
+      "package": "Package",
+      "packages": "Packages",
+      "singleTickets": "Single tickets",
+      "subsidisedSingleTickets": "Subsidised single tickets",
+      "additionalServices": "Additional services",
+      "customer": "Customer",
+      "priceList": "Price list",
+      "services": "Services",
+      "summary": "Total",
+      "priceInformation": "(additional fees may be applicable)",
+      "tickets": "Tickets",
+      "balance": "Credit balance",
+      "servicesAndPackages": "Services and packages",
+      "normalProducts": "Normal",
+      "subsidisedProducts": "Subsidised"
+    },
+    "summary": {
+      "discount": "Disc.",
+      "total": "Total",
+      "productSum": "Product sum",
+      "subsidisedSum": "Subsidised sum",
+      "charges": "Charges",
+      "fee": "Charge",
+      "singlePrice": "price",
+      "chargePerTicket": "charge per ticket",
+      "fees": "Fees",
+      "sum": "Sum",
+      "comments": "Comments",
+      "booking_comments": "Booking comments",
+      "mandatory_cross_sell": "This position is connected with other row in your booking, therefore it is not removable.",
+      "partial_mandatory_cross_sell": "Some of booking positions are connected with other row in your booking. Not all booking positions will be removed.",
+      "cross_sell_only": "Cannot add product as it is only available in cross sell."
+    },
+    "delay": {
+      "day": {
+        "abbr": "d"
+      },
+      "hour": {
+        "abbr": "h"
+      },
+      "min": {
+        "abbr": "m"
+      }
+    },
+    "trip": {
+      "cancelled": "Cancelled",
+      "moreInfo": "More info",
+      "legs": "Legs",
+      "arrival": "Arrival",
+      "departure": "Departure",
+      "ticket_prices": "Ticket prices",
+      "capacity_details": "Capacity details",
+      "price_not_defined": "not defined",
+      "suggested_price": "suggested price",
+      "voyage_leg_cancelled": "Voyage leg has been cancelled"
+    },
+    "tariff": "Tariff",
+    "message": {
+      "capacity_exceeded": "Capacity of at least one product was exceeded",
+      "service_product_configuration": "Service product cannot be added to given route. This might be configuration issue.",
+      "crossSellLoop": "Loop detected in cross sell. Please validate cross sell configuration.",
+      "SHIFT_CLOSED": "Shift is closed.",
+      "create_error": "Unable to create booking",
+      "customer_limit_exceeded_error": "Customer limit was exceeded. Booking was not updated.",
+      "customer_insufficient_funds_error": "Customer could not be changed. Insufficient funds.",
+      "delete_error": "Unexpected error during booking deletion",
+      "get_tariffs_error": "Unable to get tariffs",
+      "cross_sell_applied": "Cross sell product added to your booking:<br/> {{crossSells}}",
+      "cross_sell_applied_plural": "Cross sell products added to your booking:<br/> {{crossSells}}",
+      "passenger_has_vehicle": "Passenger has a vehicle assigned",
+      "unexpected_error": "Unexpected error"
+    },
+    "cancellation": {
+      "success": "Booking cancelled successfully!",
+      "error": "Error during cancellation of a booking",
+      "confirm_header": "Confirm booking cancellation",
+      "confirm_body": "Are you sure you want to cancel this booking? This operation cannot be undone.",
+      "booking_position": {
+        "error_header": "Error during cancellation",
+        "error": "Error during cancellation of a bookingPosition"
+      },
+      "ticket": {
+        "error_header": "Error during cancellation",
+        "error": "Error during cancellation of a ticket"
+      },
+      "modal": {
+        "booking": {
+          "header": "Confirm booking cancellation",
+          "body": "You are about to cancel the selected booking. This action is irreversible and may cause a charge of a cancellation fee.",
+          "cancel_label": "Keep booking",
+          "ok_label": "Cancel booking"
+        },
+        "booking_position": {
+          "header": "Confirm bookingposition cancellation",
+          "body": "You are about to cancel the selected bookingposition. This action is irreversible and may cause a charge of a cancellation fee.",
+          "cancel_label": "Keep bookingposition",
+          "ok_label": "Cancel bookingposition"
+        },
+        "ticket": {
+          "header": "Confirm ticket cancellation",
+          "body": "You are about to cancel the selected ticket. This action is irreversible and may cause a charge of a cancellation fee.",
+          "cancel_label": "Keep ticket",
+          "ok_label": "Cancel ticket"
+        },
+        "fee_cancellation_label": "Don't charge cancellation fee"
+      },
+      "CANNOT_BOARD_ON_CANCELLED_VOYAGE_LEG": "Can not board on cancelled voyage leg",
+      "NO_CASHBOX_GROUP": "Cannot cancel position paid by cash without cashbox selected. Please open shift with cashbox group."
+    },
+    "refund": {
+      "success": "Booking refund successfully!",
+      "error": "Error during refund of a booking",
+      "refund_money": "Refund money",
+      "withdrawn_following_amount_from_cashbox": "Withdrawn following amount from cashbox",
+      "label": {
+        "refund_booking": "Refund booking",
+        "cancellation_fee": "cancellation fee",
+        "do_not_charge_cancellation_fee": "Do not charge cancellation fee",
+        "amount_to_be_refunded": "Amount to be refunded",
+        "total_amount_be_refunded": "Total amount to be refunded",
+        "cashbox_to_withdrawn_money": "Cashbox to withdrawn money",
+        "refund_money_via_payeeze": "Refund money for this transition will be done via Payeeze website. After clicking Refund button you will be presented with refund ID for this transaction and link to Payeeze refund website.",
+        "amount_in_cashbox_is_not_sufficient_for_the_refund_select_different_cashbox": "Amount in cashbox is not sufficient for the refund. Select different cashbox",
+        "please_select_cashbox": "Please select cashbox",
+        "no_cashbox_group": "Unable to refund booking as shift does not have a cashbox assigned.",
+        "refund_id_for_transaction": "Please use Payeezy refund process to trigger the refund for the customer. The transaction ID(s) for the refund is (are)",
+        "go_to_payeeze": "Go to Payeezy",
+        "sum": "sum",
+        "refund_money_via_saferpay": "The refund will be done automatically via Saferpay to the customers credit card. Do you wish to refund the amount?",
+        "refund_money_via_six_terminal_online": "Please use the terminal to finalize the refund for the passenger. The refund should be done to the following card {{cardProvider}} - {{cardNumber}}. Please verify the card given to you by the passenger",
+        "do_not_received_payeezy_transaction": "Can not rcecived payeezy transaction",
+        "do_not_received_six_offline_last_transaction": "Can not received information about last transaction made by six terminal offline",
+        "transaction_id": "Transaction id",
+        "refund_money_via_six_terminal_offline": "Please use the terminal to finalize the refund for the passenger. The refund should be done to the originally utilised credit card.",
+        "auth_code": "Auth code"
+      },
+      "button": "Refund"
+    },
+    "list": {
+      "title": "Booking list",
+      "label": {
+        "bookingNumber": "BOOKING NO",
+        "dateOfCreation": "Date of creation",
+        "customer": "Customer",
+        "owner": "Booking owner",
+        "company": "Company",
+        "status": "Status",
+        "booking_details": "Booking Details",
+        "passenger_data": "Passenger Data",
+        "voyage_leg_id": "Voyageleg ID",
+        "ie_booking_details": "i.e. booking no, company or customer",
+        "ie_passenger_data": "i.e. last name",
+        "ie_voyage_leg_id": "i.e. 12345",
+        "cancelled_leg_tooltip": "At least one of the voyageleg in this booking was cancelled.",
+        "updated_leg_tooltip": "At least one of the voyagelegs in this booking has been modified."
+      },
+      "message": {
+        "load": {
+          "error": "Can not retrieve booking data."
+        }
+      },
+      "button": {
+        "filter": "Filter",
+        "clear": "Clear"
+      }
+    },
+    "customer": {
+      "load": "Can not retrieve customer data.",
+      "delete": {
+        "success": "Customer removed successfully.",
+        "error": "Error during removing of a customer."
+      },
+      "addToBooking": {
+        "success": "Customer added successfully.",
+        "error": "Error during adding of a customer.",
+        "errorAgencyCustomer": "User has agency customer."
+      }
+    },
+    "promoCode": {
+      "message": {
+        "invalidProduct": "Promotional code cannot be applied to the chosen products",
+        "init": {
+          "error": "Error while loading promotional codes."
+        },
+        "submit": {
+          "success": "Promotional code {{code}} applied.",
+          "error": {
+            "general": "Error while submitting promotional code.",
+            "PROMO_CODE_GENERIC_ERROR": "Promotional code is not valid.",
+            "PROMO_CODE_VALIDITY_ERROR": "Promotional code is not longer valid.",
+            "PROMO_CODE_TRAVEL_DATE_ERROR": "Promotional code is not valid for the chosen date.",
+            "PROMO_CODE_TRANSPORT_PRODUCT_ERROR": "Promotional code cannot be applied to the chosen transport products.",
+            "PROMO_CODE_SERVICE_PRODUCT_ERROR": "Promotional code cannot be applied to the chosen service products.",
+            "PROMO_CODE_PACKAGE_PRODUCT_ERROR": "Promotional code cannot be applied to the chosen package products.",
+            "PROMO_CODE_PACKAGE_PRODUCT_COMPONENT_ERROR": "Promotional code cannot be applied to the chosen package product components.",
+            "PROMO_CODE_ROUTE_ERROR": "Promotional code cannot be applied for this route.",
+            "PROMO_CODE_COMBINATION_ERROR": "Promotional codes cannot be combined."
+          }
+        },
+        "remove": {
+          "success": "Promotional code {{code}} removed.",
+          "error": "Error while removing promotional code."
+        }
+      },
+      "label": {
+        "apply": "Apply promotion code to booking"
+      },
+      "button": {
+        "apply": "Apply"
+      }
+    },
+    "services": {
+      "add_room": "Add room",
+      "booking_no": "Locator no",
+      "checkin": "Checkin date",
+      "checkout": "Checkout date",
+      "guestsPerRoom": "Guests",
+      "hotelRoomType": "Hotel/Room type",
+      "label": "Services",
+      "name": "Name",
+      "packages": "Packages",
+      "price": "Price",
+      "pricePerNight": "Price per night",
+      "roomQuantity": "No of rooms",
+      "singlePrice": "Price Per Ticket",
+      "ticketQuantity": "No of tickets",
+      "totalPrice": "Price total"
+    },
+    "status": {
+      "BOOKED": "BOOKED",
+      "PAID": "PAID",
+      "CANCELLED": "CANCELLED",
+      "REFUNDED": "REFUNDED",
+      "TO_BE_INVOICED": "TO BE INVOICED",
+      "PARTIALLY_PAID": "PARTIALLY PAID"
+    },
+    "editTrip": {
+      "title": "Change voyageleg",
+      "error": "Booking modification failed",
+      "success": "Booking modification succeeded",
+      "dependentPositionsUpdated": "The date of travel of dependent products has been updated"
+    }
+  },
+  "payment": {
+    "label": {
+      "title": "Payment method",
+      "summary_title": "Payment Summary",
+      "booking_total": "Booking total",
+      "total_paid": "Total paid",
+      "amount_left": "Amount left",
+      "amount_paid": "Amount paid",
+      "change": "Change",
+      "overpayment": "Overpayment"
+    },
+    "button": {
+      "finish": "Finish payment",
+      "checkin": "Go to check-in",
+      "pay": "Pay"
+    },
+    "paymentTypes": {
+      "credit_card_with_terminal": "Credit card with terminal",
+      "credit_card_without_terminal": "Credit card without terminal",
+      "invoice": "Invoice",
+      "cash": "Cash",
+      "agency": "Agency",
+      "saferpay": "Saferpay",
+      "wire_transfer": "WireTransfer",
+      "direct_debit": "DirectDebit"
+    },
+    "message": {
+      "success": "Payment successfully added!",
+      "error": "Error during payment!"
+    },
+    "validation": {
+      "minimal_amount_to_pay": "Value you entered is incorrect. Please enter value larger then zero."
+    },
+    "status": {
+      "PAID": "PAID",
+      "NOT_PAID": "NOT PAID",
+      "PARTIALLY_PAID": "PARTIALLY PAID",
+      "CANCELLED": "CANCELLED",
+      "REFUNDED": "REFUNDED"
+    },
+    "sixOffline": {
+      "modalHeader": "Terminal payment",
+      "modalContent": "Please make a terminal payment with the card terminal {{terminalId}} for {{amount}} and confirm by inputting the AuthCode of the transaction.",
+      "authCode": "AuthCode",
+      "getTerminalError": "Unable to get Six offline terminal ID"
+    }
+  },
+  "checkin": {
+    "label": "Check-in",
+    "error": {
+      "CHECKIN_NOT_ENOUGH_MONEY": "Booking has not been fully paid yet.",
+      "CHECKIN_PASSENGER_ALREADY_CHECKEDIN": "Passenger has been already checked-in.",
+      "ID_DOCUMENT_DUPLICATE": "Passenger with same ID Document number already checked-in to this voyage.",
+      "LICENSEPLATE_DUPLICATE": "Vehicle with the same license plate number has already been checked-in for this voyage."
+    }
+  },
+  "booking-details": {
+    "summary": {
+      "title": "Details",
+      "label": {
+        "costs": "Costs",
+        "productSum": "Product sum",
+        "subsidy": "Subsidy",
+        "discounts": "Discounts",
+        "fees": "Fees",
+        "totalCost": "Total cost",
+        "bookingFees": "Booking fees",
+        "grand_total": "Grand total",
+        "discount": "Discounts applied",
+        "already_paid": "Sum already paid",
+        "refund": "Refunded",
+        "amount_left": "To be paid",
+        "by": "by",
+        "created": "Created",
+        "customer": "Customer",
+        "modified": "Modified",
+        "cancelled": "Cancellation date",
+        "booking_owner": "Booking owner",
+        "payment": "Payment",
+        "to_be_invoiced": "To be invoiced (supplied)",
+        "overpayment": "Overpayment",
+        "to_be_invoiced_not_yet": "To be invoiced (not yet supplied)",
+        "cancellationFee": "Cancellation fee"
+      },
+      "message": {
+        "payment_load_error": "Can not retrieve payment data!",
+        "booking_details_load_error": "Error loading booking details",
+        "boarding_card_error": "Error loading boarding card",
+        "checkout_success": "Checkout was successful.",
+        "checkout_error": "Error during checkout."
+      }
+    },
+    "message": {
+      "booking_load_error": "Can not retrieve booking data!",
+      "document_expired_error": "Document has expired.",
+      "reference_number_update_error": "Cannot update booking no.",
+      "booking_confirmation_error": "Error loading booking confirmation or luggage tag",
+      "refund_confirmation_error": "Error loading refund confirmation",
+      "email_confirmation": "Email confirmation",
+      "send_email_with_success": "Sent email with confirmation to owner",
+      "send_email_with_error": "Occur some problems while sent email with confirmation",
+      "lack_email_owner": "Owner does not have define email",
+      "lack_owner_in_booking": "Booking does not have define email",
+      "failure_downloading_invoice": "Failed to download invoice",
+      "six_terminal_online_data_broken": "Can not retrieve six terminal online data"
+    },
+    "label": {
+      "confirmation": "Confirmation",
+      "edit_booking": "Edit booking",
+      "cancel_booking": "Cancel booking",
+      "refund_booking": "Refund Booking",
+      "payment": "Payment",
+      "send_confirmation_button": "Send Confirmation",
+      "invoice": "Invoice",
+      "actions": "Actions"
+    },
+    "comments": {
+      "comment": {
+        "edited": "(edited)"
+      },
+      "editor": {
+        "add": "Add",
+        "add_comment": "Add comment",
+        "confirmation_body": "Are you sure that you want to overwrite comment?",
+        "confirmation_header": "Comment editor",
+        "edit_comment": "Edit comment",
+        "flag_as_important": "Flag as important",
+        "print_on_booking_confirmation": "Print on booking confirmation",
+        "update": "Update"
+      },
+      "message": {
+        "retrieve_comment_booking_error": "Could not retrieve comments for booking.",
+        "retrieve_comment_booking_position_error": "Could not retrieve comments for booking position.",
+        "add_error": "Comment could not be added.",
+        "update_error": "Comment could not be updated.",
+        "remove_error": "Comment could not be removed"
+      }
+    },
+    "tickets": {
+      "header": "Tickets",
+      "ticketNo": "Ticket number"
+    },
+    "quickAddProduct": {
+      "label": {
+        "addProduct": "Add product",
+        "ticketType": "Ticket type",
+        "oneWay": "One way",
+        "roundtrip": "Roundtrip"
+      }
+    }
+  },
+  "general": {
+    "message": {
+      "success": "Success!",
+      "error": "Error!",
+      "warning": "Warning!",
+      "login_failed": "Login failed",
+      "logout_failed": "Logout failed",
+      "unsavedChanges": "You have unsaved changes that will be lost!",
+      "cannotLoad": {
+        "country": "Cannot load countries!",
+        "language": "Cannot load languages!",
+        "dropdown": "Cannot load dropdown!"
+      }
+    },
+    "validation": {
+      "required": "Please enter a value.",
+      "pattern": "Invalid input format."
+    },
+    "button": {
+      "done": "Done",
+      "back": "Back",
+      "cancel": "Cancel",
+      "close": "Close",
+      "save": "Save",
+      "ok": "Ok",
+      "add": "Add",
+      "confirm": "Confirm",
+      "delete": "Delete",
+      "details": "Details",
+      "start": "Start",
+      "yes": "Yes",
+      "no": "No",
+      "apply": "Apply",
+      "filter": "Filter",
+      "clear": "Clear",
+      "send": "Send"
+    },
+    "label": {
+      "all": "All",
+      "add": "Add",
+      "date": "Date",
+      "ticket": "Ticket",
+      "amount": "Qty",
+      "type": "Type",
+      "edit": "Edit",
+      "actions": "Actions",
+      "paging": {
+        "showing": "Showing {{currentStart}}-{{currentEnd}} of {{total}}",
+        "no_results": "No results found"
+      }
+    },
+    "hint": {
+      "phone": "(00 + country code + phone)"
+    }
+  },
+  "guard": {
+    "message": {
+      "main": "Do you want to reload this site?",
+      "additional": "Changes that you've made will not be saved."
+    }
+  },
+  "port": {
+    "label": {
+      "departure": "Departure",
+      "arrival": "Arrival"
+    },
+    "message": {
+      "error": "Can not retrieve port data!"
+    }
+  },
+  "transportation": {
+    "label": "Transportation",
+    "message": {
+      "error": "Can not retrieve transportation data!"
+    }
+  },
+  "documentScan": {
+    "body": "Please swipe the document through the scanner.",
+    "error": "Could not read data from document. Please try again or enter the data manually.",
+    "success": "%s (%s) document was read properly. Please scan next document.",
+    "title": "Scan document",
+    "rejectChange": "Reject change"
+  },
+  "boarding_scan": {
+    "error": "Could not read data from boarding card. Please try again or board manually.",
+    "error_not_valid": "Boarding card is invalid for travel.",
+    "title": "Scan boarding card",
+    "body": "Please scan the boarding card or type in boarding card number.",
+    "rejectChange": "Reject change"
+  },
+  "boarding": {
+    "list": {
+      "title": "Boarding list",
+      "label": {
+        "departure_date": "Departure date",
+        "departure": "Departure",
+        "arrival": "Arrival",
+        "std": "STD",
+        "sta": "STA",
+        "company": "Company",
+        "line": "Line",
+        "transportation": "Transportation",
+        "turnover": "Turnover",
+        "boarding": "Boarding"
+      },
+      "button": {
+        "start_boarding": "Start",
+        "report_boarding": "Report",
+        "resend_boarding": "Resend",
+        "clear": "Clear"
+      },
+      "message": {
+        "load": {
+          "error": "Can not retrieve boardings data."
+        }
+      }
+    },
+    "transportables": {
+      "labels": {
+        "boarding_details": "Boarding details",
+        "title_summary": "Summary"
+      }
+    },
+    "messages": {
+      "success": {
+        "boarded": "Boarding card boarded",
+        "deboarded": "Boarding card deboarded"
+      },
+      "errors": {
+        "BOARDING_CARD_ALREADY_USED": "Boarding card has been already used",
+        "BOARDING_CARD_INVALID": "Boarding card is invalid for travel",
+        "BOARDING_CARD_NOT_FOUND": "Boarding card not found using boarding card number",
+        "BOARDING_CARD_NUMBER_NOT_ON_LIST": "Boarding card number not found on the boarding list",
+        "INVALID_TICKET_STATUS": "Ticket is not checked in",
+        "notBoarded": "Could not board boarding card - retry boarding",
+        "notDeboarded": "Could not deboard boarding card - retry deboarding",
+        "TICKET_POSITION_NOT_FOUND": "Ticket not found using ticket number"
+      }
+    },
+    "button": {
+      "boarding_card": "Boarding card",
+      "boardingList": "Boarding list PDF",
+      "cbp": "Export boarded list",
+      "sendManifest": "Send Manifest",
+      "moroccoCsv": "Morocco Csv",
+      "madridPolicePortel": "Madrid Police/PORTEL",
+      "checkout": "Check-out",
+      "scanBoardingCard": "Scan boarding card",
+      "board": "Board",
+      "deboard": "Deboard"
+    },
+    "passengers": {
+      "title": "Passenger list",
+      "placeholder": {
+        "enter_filter": "Enter passenger name or ID number..."
+      },
+      "message": {
+        "load_leg": {
+          "error": "Can not retrieve leg data."
+        },
+        "load_passengers": {
+          "error": "Can not retrieve passengers data."
+        },
+        "boarding_list_error": "Error loading boarding list",
+        "cbp_error": "Error loading boarded list",
+        "moroccoCsvSent": "CSV boarding manifest sent successfully",
+        "moroccoCsvError": "Unable to send CSV boarding manifest",
+        "madridPolicePortelSent": "PORTEL list sent successfully",
+        "madridPolicePortelError": "Unable to send PORTEL list",
+        "error": {
+          "MISSING_NSW_ERROR": "Couldn't send report. Please fill in the NSW number for the voyageleg",
+          "NSW_FORMAT_ERROR": "Voyageleg NSW number format is wrong",
+          "MADRID_POLICE_PORTEL_NSW_ERROR": "There can be only one nsw number available for Madrid Police Portel Report"
+        }
+      },
+      "label": {
+        "surname": "Surname",
+        "name": "First name",
+        "full_name": "First name and surname",
+        "birth": "Date of birth",
+        "gender": "Gender",
+        "nationality": "Nationality",
+        "document_type": "Document type",
+        "document_id": "Document id",
+        "boarding_card_id": "Boarding card id",
+        "status": "Status",
+        "travelling": "Travelling",
+        "BOOKED": "Booked",
+        "PAID": "Booked",
+        "PARTIALLY_PAID": "Booked",
+        "CHECKEDIN": "Checked-In",
+        "BOARDED": "Boarded",
+        "CANCELLED": "Cancelled",
+        "REFUNDED": "Refunded",
+        "route": "Route",
+        "std": "STD",
+        "sta": "STA",
+        "etd": "(ETD)",
+        "eta": "(ETA)",
+        "passengers": "Passengers",
+        "total": "Total",
+        "verified": "Verified",
+        "not_verified": "Not verified"
+      },
+      "dialog": {
+        "boarding": {
+          "title": "Boarding card"
+        },
+        "message": {
+          "not_valid_today": "Scanned boarding card is not valid for today's cruise"
+        },
+        "label": {
+          "boarding_card": "Boarding card",
+          "date": "Date",
+          "route": "Route",
+          "passenger": "Passenger",
+          "vehicle": "Vehicle"
+        },
+        "button": {
+          "force_boarding": "Force boarding"
+        }
+      }
+    },
+    "vehicles": {
+      "title": "Vehicle list",
+      "placeholder": {
+        "enter_filter": "Enter vehicle license plate or type..."
+      },
+      "message": {
+        "load_leg": {
+          "error": "Can not retrieve leg data."
+        },
+        "load_passengers": {
+          "error": "Can not retrieve vehicles data."
+        },
+        "boarding_list_error": "Error loading boarding list",
+        "cbp_error": "Error loading boarded list"
+      },
+      "label": {
+        "make": "Make",
+        "model": "Model",
+        "license_plate": "License plate",
+        "type": "Type",
+        "driver": "Driver",
+        "boarding_card_id": "Boarding card id",
+        "status": "Status",
+        "BOOKED": "Booked",
+        "PAID": "Booked",
+        "PARTIALLY_PAID": "Booked",
+        "CHECKEDIN": "Checked-In",
+        "BOARDED": "Boarded",
+        "CANCELLED": "Cancelled",
+        "REFUNDED": "Refunded",
+        "route": "Route",
+        "std": "STD",
+        "sta": "STA",
+        "etd": "(ETD)",
+        "eta": "(ETA)",
+        "vehicles": "Vehicles",
+        "total": "Total"
+      },
+      "dialog": {
+        "boarding": {
+          "title": "Boarding card"
+        },
+        "message": {
+          "not_valid_today": "Scanned boarding card is not valid for today's cruise"
+        },
+        "label": {
+          "boarding_card": "Boarding card",
+          "date": "Date",
+          "route": "Route",
+          "vehicle": "Vehicle"
+        },
+        "button": {
+          "force_boarding": "Force boarding"
+        }
+      }
+    },
+    "close": {
+      "success": "Success! Report turnover was send.",
+      "error": "Error! Report turnover could not be send.",
+      "CAN_NOT_AUTOBOARD_UNPAID_TICKET_POSITION": "Some ticket positions were not paid.",
+      "CAN_NOT_AUTOBOARD_TICKET_POSITION": "Some ticket positions were not autoboarded."
+    },
+    "reportTurnoverConfirmation": {
+      "header": "Report turnover",
+      "body": "Please input the actual time of arrival of",
+      "ata": "Actual Time of Arrival (ATA)",
+      "atd": "Actual Time of Departure (ATD)"
+    }
+  },
+  "operation": {
+    "tab": {
+      "voyageLegs": "Voyage legs",
+      "voyageTemplates": "Voyage templates"
+    },
+    "list": {
+      "title": "Operations",
+      "cancel-modal": {
+        "header": "CANCEL VOYAGELEG(S)",
+        "body": {
+          "title": "Cancellation reason"
+        },
+        "buttons": {
+          "ok": "Cancel voyageleg(s)",
+          "cancel": "Keep voyageleg(s)"
+        },
+        "error": "There was error during cancel operation",
+        "warn": "You need to choose cancellation reason",
+        "defaultOption": "Choose cancellation reason"
+      },
+      "label": {
+        "id": "ID",
+        "departure_date": "Departure date",
+        "departure": "Departure",
+        "operation_details": "Voyageleg details",
+        "voyageLegId": "Voyageleg ID",
+        "ie_voyage_leg_id": "i.e. 12345",
+        "ie_booking_details": "i.e. voyageleg NSW number, transportation, line, company",
+        "arrival": "Arrival",
+        "std": "STD",
+        "sta": "STA",
+        "etd": "(ETD)",
+        "eta": "(ETA)",
+        "company": "Company",
+        "line": "Line",
+        "action": "Action",
+        "transportation": "Transportation",
+        "voyage_leg_status": "Voyageleg status",
+        "nswNumber": "NSW Number",
+        "nswNumberMissing": "N/A",
+        "status": {
+          "all": "All",
+          "cancelled": "Cancelled",
+          "active": "Active",
+          "updated": "Updated",
+          "true": "Cancelled",
+          "false": "Active"
+        }
+      },
+      "button": {
+        "cancel_voyageleg": "Cancel voyageleg",
+        "editVoyageLeg": "Edit",
+        "clear": "Clear",
+        "notify": "Notify owners"
+      }
+    },
+    "templateList": {
+      "button": {
+        "create": "Create template",
+        "copy": "Copy",
+        "edit": "Edit"
+      },
+      "label": {
+        "templateDetails": "Template details",
+        "firstPort": "First port",
+        "lastPort": "Last port",
+        "transportationType": "Transportation type",
+        "name": "Name",
+        "company": "Company",
+        "line": "Line",
+        "actions": "Actions",
+        "ieBookingDetails": "i.e. template name, line, company",
+        "remove_template_header": "Remove Template",
+        "remove_template_confirmation_message": "Are you sure you want to remove templates from the list?"
+      },
+      "message": {
+        "load": {
+          "error": "Can not retrieve voyage templates data."
+        }
+      }
+    },
+    "templateEdit": {
+      "title": "Create voyage template",
+      "nameRequired": " Name field cannot be empty",
+      "button": {
+        "cancel": "Cancel",
+        "save": "Save",
+        "addTour": "Add another point"
+      },
+      "label": {
+        "name": "Name",
+        "templateName": "Template name",
+        "company": "Company",
+        "companyName": "Company name",
+        "transportationName": "Transportation name",
+        "chooseTransportation": "Choose transportation",
+        "companyLine": "Company line",
+        "transportationCategory": "Transportation category",
+        "tour": "Tour",
+        "disembarkingAllowed": "Disembarking allowed",
+        "embarkingAllowed": "Embarking allowed",
+        "yes": "yes",
+        "no": "no",
+        "timeInPort": "Time in port",
+        "minutesAbbr": "min",
+        "hoursAbbr": "h",
+        "daysAbbr": "d",
+        "travelTime": "Travel time",
+        "tourSummary": "Tour Summary",
+        "portTime": "Port operation time",
+        "totalTravelTime": "Total travel time",
+        "addSchedule": "Add schedule"
+      },
+      "helpText": {
+        "name": "Define name for your voyage template",
+        "company": "Provide company name and line",
+        "transportationCategory": "Select transportation category",
+        "tour": "Define every tour stop together with operation time in port, and travel time"
+      },
+      "message": {
+        "load": {
+          "error": "Could not load voyage template data."
+        },
+        "schedule": {
+          "entryOverlaps": "Cannot save overlapping entries",
+          "eventError": "Could change Schedule"
+        },
+        "save": {
+          "success": "Success! The voyage template was saved.",
+          "error": "Error! Cannot save voyage template",
+          "invalidTourStopsNumber": "Voyage template needs minimum 2 tour stops",
+          "nameNotUnique": "The voyage template name is already taken.",
+          "scheduleNameNotUnique": "Schedule name - transportation pair needs to be unique.",
+          "scheduleWithoutName": "All schedules need to have name"
+        },
+        "loadCompanies": {
+          "error": "Could not load companies data."
+        },
+        "loadTransportations": {
+          "error": "Could not load transportations data."
+        },
+        "loadTransportationCategories": {
+          "error": "Could not load transportation categories data."
+        },
+        "getEmptySchedule": {
+          "error": "Could not add new Schedule."
+        }
+      },
+      "schedule": {
+        "message": {
+          "load": {
+            "error": "Could not load schedules."
+          }
+        },
+        "label": {
+          "calendarName": "Calendar name",
+          "addNewEvent": "Add new event",
+          "time": "Time"
+        },
+        "addScheduleEvent": {
+          "label": {
+            "newEvent": "New event",
+            "editEvent": "Edit event",
+            "startAt": "Start at"
+          }
+        }
+      }
+    },
+    "generateVoyage": {
+      "title": "Generate voyage",
+      "label": {
+        "voyageTemplate": "Voyage template",
+        "tourSummary": "Tour summary",
+        "companyName": "Company name:",
+        "companyLine": "Company line:",
+        "transportationCategory": "Transportation category:",
+        "totalTravelTime": "Total travel time:",
+        "scheduleName": "Schedule name",
+        "selectCalendarName": "Select calendar name",
+        "scheduleSummary": "Schedule summary",
+        "transportation": "Transportation:",
+        "occursEvery": "Occurs every:",
+        "period": "Period",
+        "voyage": "Voyage"
+      },
+      "button": {
+        "generate": "Generate",
+        "validate": "Validate",
+        "generateAnyway": "Generate anyway",
+        "generateVoyage": "Generate voyage",
+        "saveAndGenerate": "Save and Generate"
+      },
+      "placeholder": {
+        "enterVoyageTemplate": "Enter voyage template"
+      },
+      "message": {
+        "timeError": "Voyages are about to be generated up to ",
+        "serverError": "There are some conflicts between the new and already existing voyage legs",
+        "generationError": "Voyage legs could not be generated"
+      }
+    },
+    "notificationDialog": {
+      "header": "Notify booking owners",
+      "communicationChannel": "Communication channel",
+      "template": "Template",
+      "additionalComment": "Additional comment",
+      "email": "Email",
+      "sms": "SMS",
+      "success": "The notification was sent to booking owners.",
+      "unknownError": "Notification could not be sent. Something went wrong.",
+      "someNotificationsCouldNotBeSent": "Notification could not be sent for some bookings.",
+      "couldNotSendNotificationForBookings": "Could not send notifications for bookings"
+    }
+  },
+  "transportationCategory": {
+    "message": {
+      "load": {
+        "error": "Can not retrieve transportation type data."
+      }
+    }
+  },
+  "user": {
+    "data": {
+      "cashboxPopup": {
+        "confirmDeleteCashbox": "Are you sure you want to delete selected cashbox?",
+        "deleteCashbox": "Delete Cashbox",
+        "confirmDeleteCashboxGroup": "Are you sure you want to delete selected cashboxgroup and all related cashboxes?",
+        "deleteCashboxGroup": "Delete Cashbox Group"
+      },
+      "error": {
+        "addUser": "The user could not be added to flexways.",
+        "editUser": "Could not update user data.",
+        "USER_NAME_ALREADY_EXISTS": "The User Name is already taken.",
+        "INCORRECT_INPUT": "Wrong field validation",
+        "currencyDuplicate": "There can be only one currency - company pair in each cashbox group",
+        "CASHBOX_GROUP_NAME_DUPLICATE": "The cashboxgroup name is already taken.",
+        "CASHBOX_NAME_DUPLICATE": "The cashbox name within cashboxgroup is already taken",
+        "cashboxNotDeleted": "Could not delete cashbox",
+        "cashboxGroupNotDeleted": "Could not delete cashbox group",
+        "cashboxNotEmpty": "Could not delete not empty cashbox",
+        "shiftOpenedCashbox": "Can not delete cashbox with opened Shift",
+        "shiftOpenedCashboxGroup": "Can not delete cashbox group with opened Shift",
+        "cashboxInputsDuplicate": "Can not have more than one active cashbox for same company, currency and group"
+      },
+      "success": {
+        "addUser": "A new user has been added to flexways.",
+        "editUser": "User data has been updated."
+      },
+      "newUser": "New user",
+      "cashboxNotEmpty": "Can not disable not empty cashbox",
+      "addCashBox": "Add cashbox",
+      "editUser": "Edit user",
+      "details": "User details",
+      "username": "User name",
+      "standard": "Standard",
+      "agency": "Agency",
+      "userRoles": "User roles",
+      "globalRoles": "Global roles",
+      "supervisedCashboxGroups": "Supervised cashbox groups",
+      "userRolesPerCompany": "User roles per company",
+      "addAnotherCompany": "Add another company",
+      "userType": "User type",
+      "contactDetails": "Contact details",
+      "mobilePhone": "Mobile phone",
+      "emailAddress": "Email address",
+      "preferredLanguage": "Preffered language",
+      "counterInformation": "Counter information",
+      "companyName": "Company name",
+      "counterName": "Counter name",
+      "cashboxName": "Cashbox name",
+      "currency": "Currency",
+      "amount": "Amount",
+      "baseAmount": "Base amount",
+      "accountType": "Account type",
+      "password": "Password",
+      "passwordDetails": "Password details",
+      "passwordGenerate": "Generate one-time password",
+      "passwordConstraints": {
+        "row1": "Password must contain at least 8 characters, including at least:",
+        "row2": "- 1 upper case letter",
+        "row3": "- 1 lower case letter",
+        "row4": "- 1 number",
+        "row5": "- 1 special character such as !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+      },
+      "pinGenerationMethod": "PIN generation method",
+      "email": "Email",
+      "sms": "SMS",
+      "enterRole": "Enter role",
+      "addRole": "Add role",
+      "cashboxInformation": "Cashbox information",
+      "cashboxDetails": "Cashbox details",
+      "cashboxGroupName": "Cashbox group name",
+      "addCashboxGroup": "Add cashbox group",
+      "cashboxLogType": "Cashbox log type",
+      "cashboxBookingCode": "Cashbox booking code",
+      "cashboxLogBookingCode": "Cashbox log booking code",
+      "debtorNumber": "Debtor number",
+      "documentType": "Document type",
+      "accountNumber": "Account number",
+      "supplierNumber": "Supplier number",
+      "taxCode": "Tax code",
+      "cashboxTaxCode": "Cashbox tax code",
+      "amountType": "Amount type",
+      "accountingDetails": "Accounting details",
+      "addAccountingDetails": "Add accounting details",
+      "cashboxLogTypes": {
+        "withdrawal": "Withdrawal",
+        "cashDepositAtBank": "Cash deposit at bank",
+        "cashIncreaseFromBank": "Cash increase from bank",
+        "cashDifference": "Cash difference"
+      },
+      "amountTypes": {
+        "positive": "Positive",
+        "negative": "Negative"
+      },
+      "header": {
+        "edit": "Are you sure you want to apply changes?"
+      },
+      "tabLabel": {
+        "userDetails": "User details",
+        "userRoles": "User roles",
+        "counterCashbox": "Counter & Cashbox"
+      },
+      "accountStatus": {
+        "active": "Active",
+        "inactive": "Inactive"
+      }
+    }
+  },
+  "customer": {
+    "data": {
+      "newCustomer": "New customer",
+      "individual": "Individual",
+      "company": "Company",
+      "individualCustomer": "INDIVIDUAL",
+      "companyCustomer": "COMPANY",
+      "debtorCustomer": "COMPANY | DEBTOR",
+      "customerInformation": "Customer information",
+      "customerType": "Customer type",
+      "personalDetails": "Personal details",
+      "salutation": "Salutation",
+      "title": "Title",
+      "firstName": "First name",
+      "middleName": "Middle name",
+      "firstLastName": "First last name",
+      "secondLastName": "Second last name",
+      "mobileNumber": "Mobile phone",
+      "email": "Email address",
+      "phoneNumber": "Phone number",
+      "faxNumber": "Fax number",
+      "preferredCommunication": "Preferred communication channel",
+      "address": "Address",
+      "addressType": "Type of address",
+      "addressLine": "Address line",
+      "poBox": "PO box",
+      "zipCode": "Zip code",
+      "city": "City",
+      "district": "District",
+      "country": "Country",
+      "addAddress": "Add another address",
+      "taxId": "Tax ID",
+      "save_error": "Error while saving customer data.",
+      "save_success": "Customer saved."
+    }
+  },
+  "invoices": {
+    "title": "Invoices",
+    "filter": {
+      "buttons": {
+        "booking_positions": "Show booking positions",
+        "invoices": "Show invoices"
+      },
+      "errors": {
+        "customer": "Customer is required.",
+        "customer_data": "Customer information could not be retrieved.",
+        "currency": "Currency is required.",
+        "currency_data": "Currency information could not be retrieved.",
+        "date_range": "Date range is required."
+      },
+      "labels": {
+        "all": "All",
+        "currency": "Currency",
+        "customer": "Customer",
+        "customer_do_not_match": "Could not match customer with given search criteria",
+        "date": "Date (UTC)",
+        "status": "Status",
+        "sum": "Total sum of selected booking positions (including discounts and fees):",
+        "tariff": "Tariff"
+      },
+      "options": {
+        "invoiced": "Invoiced",
+        "to_be_invoiced": "To be invoiced"
+      },
+      "placeholders": {
+        "customer": "Enter customer name..."
+      }
+    },
+    "data": {
+      "header": {
+        "amount": "Amount",
+        "boardedCounter": "Boarded/Not boarded",
+        "bookingNumber": "Booking NO",
+        "company": "Company",
+        "creationDate": "Date of creation",
+        "date": "STD",
+        "id": "Id",
+        "invoice": "Invoice",
+        "invoiceNumber": "Invoice NO",
+        "invoiced": "Status",
+        "name": "Details",
+        "outwardRoute": "Outward route",
+        "price": "price",
+        "quantity": "Quantity",
+        "returnUnitPrice": "Return unit price",
+        "returnRoute": "Return route",
+        "type": "Type",
+        "tariff": "Tariff",
+        "unitPrice": "Unit price"
+      },
+      "body": {
+        "no_results": "Select customer and click button to display booking positions or invoices."
+      }
+    },
+    "buttons": {
+      "create": "Create invoice",
+      "view": "View PDF"
+    },
+    "messages": {
+      "booking_positions_error": "Could not retrieve booking positions.",
+      "create_error": "An error occurred during invoice creation",
+      "create_success": "Invoice was created successfully",
+      "invoice_list_error": "Could not retrieve invoices.",
+      "no_bookings_error": "There has to be at leat one booking position with status \"To be invoiced\" in order to create invoice."
+    },
+    "spinner": {
+      "generating": "Generating invoices..."
+    },
+    "creating_invoice_popup": {
+      "header": "Date of invoice",
+      "body": {
+        "title": "Please select the date for which the invoice will be posted",
+        "invoice_date": "Invoice date"
+      },
+      "buttons": {
+        "create": "Create invoice"
+      }
+    }
+  },
+  "form": {
+    "header": {
+      "mandatoryFields": "Fields with * are mandatory"
+    },
+    "company_details": {
+      "header": "Company details",
+      "companyName": "Company name",
+      "taxId": "Tax ID"
+    },
+    "personal_details": {
+      "first_name": "First name",
+      "first_last_name": "First last name",
+      "header": "Personal details",
+      "middle_name": "Middle name",
+      "salutation": "Salutation",
+      "second_last_name": "Second last name",
+      "tax_id": "Tax ID",
+      "title": "Title",
+      "defaultLanguage": "Language"
+    },
+    "contact": {
+      "email": "Email address",
+      "fax_number": "Fax number",
+      "header": "Contact details",
+      "mobile_number": "Mobile phone",
+      "phone_number": "Phone number",
+      "preferred_communication": "Preferred communication channel"
+    },
+    "address": {
+      "add_address": "Add another address",
+      "address_line": "Address line",
+      "address_type": "Type of address",
+      "city": "City",
+      "country": "Country",
+      "header": "Address",
+      "district": "District",
+      "phone_number": "Phone number",
+      "po_box": "PO box",
+      "zip_code": "Zip code"
+    }
+  },
+  "owner": {
+    "data": {
+      "header": {
+        "information": "Booking owner is contact person. Select customer, one of the passengers or enter new one below.",
+        "title": "Booking owner"
+      },
+      "buttons": {
+        "as_customer": "Add booking owner to the customer list"
+      }
+    },
+    "messages": {
+      "save": {
+        "error": "Cannot save owner!",
+        "success": "Owner data was saved!"
+      },
+      "update": {
+        "error": "Cannot update owner!",
+        "success": "Owner data was saved!"
+      },
+      "modified": {
+        "header": "Do you want to update form?"
+      },
+      "ticket": {
+        "error": "Cannot create tickets!"
+      }
+    },
+    "summary": {
+      "customer": "Customer",
+      "go_to_route_selection": "Go to route selection",
+      "go_to_payment": "Go to payment",
+      "goToBookingDetails": "Save owner",
+      "header": "Select booking owner",
+      "passengers": "Passengers",
+      "actions_description": "Payment details - customer will be invoiced for the whole booking amount"
+    }
+  },
+  "admin": {
+    "debtor_import": {
+      "unauthorized_access": "Unauthorized access",
+      "success": "Debtor import from SAP was triggered.",
+      "failure": "Debtor import from SAP could not be triggered.",
+      "error_fetching_companies": "Unable to load available companies.",
+      "error_fetching_last_import": "Unable to load last import date."
+    }
+  },
+  "login": {
+    "usernameInput": "Login",
+    "passwordInput": "Password",
+    "forgotPasswordLink": "Forgot your password?",
+    "loginButton": "Login",
+    "welcome_label": "Welcome, ",
+    "pin": "PIN",
+    "pin_has_been_sent": "New PIN code has been sent.",
+    "resend_pin": "Resend a new PIN code",
+    "pin_was_resent": "New PIN code has been sent.",
+    "wrong_pin_number": "Wrong PIN code. Try again",
+    "validate_pin": "Validate PIN"
+  },
+  "enoad": {
+    "list": {
+      "title": "eNOAD",
+      "label": {
+        "departure_date": "Departure date",
+        "departure": "Departure",
+        "arrival": "Arrival",
+        "std": "STD",
+        "sta": "STA",
+        "company": "Company",
+        "line": "Line",
+        "transportation": "Transportation"
+      },
+      "button": {
+        "start_enoad": "Create report",
+        "clear": "Clear"
+      },
+      "message": {
+        "load": {
+          "error": "Can not retrieve voyages data."
+        }
+      }
+    },
+    "message": {
+      "load": {
+        "error": "Can not retrieve data.",
+        "dropdown_error": "Can not retrieve dropdown data."
+      }
+    },
+    "report-generation": {
+      "message": {
+        "error": "Error during report generation."
+      }
+    },
+    "crew": {
+      "remove_crew_header": "Remove Crew",
+      "remove_crew_confirmation_message": "Are you sure you want to remove crew member from the list?"
+    },
+    "cdc": {
+      "remove_cdc_header": "Remove Certain Dangerous Cargo",
+      "remove_cdc_confirmation_message": "Are you sure you want to remove Certain Dangerous Cargo from the list?"
+    },
+    "cdc-list": {
+      "remove_cdc_list_header": "Remove Certain Dangerous Cargo List",
+      "remove_cdc_list_confirmation_message": "Are you sure you want to clear Certain Dangerous Cargo list?"
+    },
+    "label": {
+      "position": "Position",
+      "last_name": "Last Name",
+      "first_name": "First Name",
+      "middle_name": "Middle Name",
+      "date_of_birth": "Date Of Birth",
+      "gender": "Gender",
+      "nationality": "Nationality",
+      "country_of_residence": "Country Of Residence",
+      "id_type": "ID Type",
+      "id_number": "ID Number",
+      "issuing_country": "Issuing Country",
+      "id_expiration_date": "ID EXPIRATION DATE",
+      "embark_country": "EMBARK COUNTRY",
+      "embark_state": "EMBARK STATE",
+      "embark_port": "Embark Port",
+      "embark_place": "EMBARK PLACE",
+      "embark_date": "Embark Date",
+      "reporting_party_name": "Reporting Party Name",
+      "reporting_party_email_address": "Reporting Party Email Address",
+      "reporting_party_relationship": "Reporting Party Relationship",
+      "reporting_party_telephone_number": "Reporting Party Telephone Number",
+      "reporting_party_fax_number": "Reporting Party Fax Number",
+      "reporting_company": "Reporting Company",
+      "vessel_location": "Vessel Location",
+      "latitude": "Latitude",
+      "direction": "Direction",
+      "degrees": "Degrees",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "longitude": "Longitude",
+      "location_description": "Location Description",
+      "submission_comments": "Submission Comments",
+      "vessel_name": "Vessel Name",
+      "call_sign": "Call Sign",
+      "vessel_id_number": "Vessel ID Number",
+      "vessel_id_number_type": "Vessel ID Number Type",
+      "country_of_registry": "Country of Registry",
+      "less_than_300_gross_tons": "Less Than 300 Gross Tons",
+      "mmsi_number": "MMSI Number",
+      "vessel_tonnage_itc_preffered": "Vessel Tonnage (ITC Preffered)",
+      "registered_owner": "Registered Owner",
+      "operator": "Operator",
+      "classification_society": "Classification Society",
+      "name_of_vessels_charterer": "Name of Vessel's Charterer",
+      "cofr_operator": "COFR Operator",
+      "vessel_class": "Vessel Class",
+      "vessel_type": "Vessel Type",
+      "vessel_sub-type": "Vessel Sub-Type",
+      "condition": "Condition",
+      "if_not_operational_describe": "If Not Operational, describe",
+      "operational_condition_of_equipment": "Operational Condition of Equipment",
+      "document_of_compliance_certificate": "Document of Compliance Certificate",
+      "safety_management_certificate": "Safety Management Certificate",
+      "date_of_issuance": "Date of issuance",
+      "issuing_agency": "Issuing agency",
+      "add_crew_member": "Add Crew Member",
+      "date_of_expiration": "Date of expiration"
+    }
+  },
+  "voyageleg": {
+    "voyagelegStatus": "Voyageleg status",
+    "statusChanged": "Changed from status %s to %s.",
+    "unauthorised": "Edit VoyageLeg could not be loaded",
+    "unauthorisedTitle": "Unauthorised",
+    "status": {
+      "all": "All",
+      "active": "Active",
+      "cancelled": "Cancelled",
+      "updated": "Updated",
+      "msg": {
+        "cancelled": "One of the voyagelegs was cancelled",
+        "updated": "One of the voyagelegs was updated"
+      }
+    },
+    "edit": {
+      "title": "Edit Voyageleg",
+      "cancel": "Cancel",
+      "save": "Save",
+      "compareModal": {
+        "title": "Compare transportation capacity",
+        "transportTitle": "Select transportation for a capacity comparison",
+        "originalSelected": "Originally selected",
+        "category": "Transportation category",
+        "transportation": "Transportation",
+        "capacityDetails": "Capacity details",
+        "comparisonSelected": "Transportation for comparison",
+        "select": "Select",
+        "noChange": "No change"
+      },
+      "send": {
+        "error": "Error! The voyageleg could not be updated.",
+        "errorCapacityTitle": "Error! The voyageleg capacity can not be below zero.",
+        "errorTitle": "Error",
+        "errorNswNonUnique": "The following NSW Number(s) is/are not unique (already exists):",
+        "errorNswNotDiffer": "Origin and destination NSW numbers should not be the same.",
+        "successTitle": "Success",
+        "success": "Success! The voyageleg has been updated."
+      },
+      "dialog": {
+        "title": "Warning",
+        "body": "Warning! The capacity for at least one resource type is lower than the number of booked tickets.",
+        "ok": "Confirm and Save",
+        "cancel": "Cancel"
+      },
+      "labels": {
+        "route": "Route",
+        "departuresTime": "Departures time",
+        "std": "Standard Time of Departure (STD)",
+        "etd": "Estimated Time of Departure (ETD)",
+        "arrivalTime": "Arrival time",
+        "sta": "Standard Time of Departure (STA)",
+        "eta": "Estimated Time of Departure (ETA)",
+        "economy": "Economy",
+        "capacity": "Capacity",
+        "seats": "seats",
+        "business": "Business",
+        "availableCapacity": "Available capacity",
+        "bicycles": "Bicycles",
+        "animals": "Animals",
+        "transportationCategory": "Transportation category",
+        "transportation": "Transportation",
+        "compareTransportation": "Compare transportation",
+        "available": "Nominal capacity",
+        "difference": "Difference",
+        "used": "Used",
+        "defaultOptionTransportation": "Choose transportation",
+        "nswNumber": "NSW Number (National Single Window Voyageleg Number)",
+        "nswPreffix": "Year",
+        "statusChanged": "Year",
+        "keepCancellationReason": "Keep cancellation reason?",
+        "notHighlighted": "Please mind the bookings and bookingpositions will not be highlighted.",
+        "highlighted": "Please mind the bookings and bookingpositions will be highlighted with a warning sign.",
+        "nswSuffix": "Unique 5-digit number"
+      },
+      "message": {
+        "nswShouldDiffer": "Origin and destination NSW numbers should not be the same!"
+      }
+    }
+  },
+  "users": {
+    "list": {
+      "all_users": "All users",
+      "add_user": "Add user",
+      "filter": "Filter",
+      "edit": "Edit",
+      "action": "Action",
+      "role": "Role",
+      "company_name": "Company name",
+      "counter_name": "Counter name",
+      "email_address": "Email address",
+      "mobile_number": "Mobile number",
+      "user_name": "User name",
+      "userStatus": "User status",
+      "status": {
+        "active": "ACTIVE",
+        "inactive": "INACTIVE",
+        "enabled": "ENABLED",
+        "disabled": "DISABLED"
+      },
+      "filter_placeholder": "Enter user information to filter...",
+      "message": {
+        "load": {
+          "error": "Cannot load users!"
+        },
+        "disableUsers": "User accounts have been disabled.",
+        "disableUsersError": "Could not disable users. Something went wrong."
+      }
+    },
+    "disable": {
+      "button": "Disable user",
+      "header": "Are you sure you want to disable the selected user(s)?"
+    }
+  },
+  "company": {
+    "list": {
+      "message": {
+        "load": {
+          "error": "Cannot load companies!"
+        }
+      }
+    }
+  },
+  "counter": {
+    "list": {
+      "message": {
+        "load": {
+          "error": "Cannot load counters!"
+        }
+      }
+    }
+  },
+  "role": {
+    "list": {
+      "message": {
+        "load": {
+          "error": "Cannot load roles!"
+        }
+      }
+    }
+  },
+  "password": {
+    "reset": {
+      "title": "Reset your password",
+      "headline": "To request a password change, please input your login and e-mail address.",
+      "usernameInput": "Username",
+      "emailInput": "E-mail",
+      "sendEmail": "Send e-mail",
+      "msg": {
+        "usernameEmailMismatch": "The email address is invalid.",
+        "unknownError": "Password reset not possible. Something went wrong."
+      }
+    },
+    "checkEmail": {
+      "instructionsTitle": "Check your e-mail",
+      "instructions": "Please check your e-mail. A link and instructions for resetting your password have been sent to",
+      "noEmailTitle": "Didn't receive the e-mail?",
+      "noEmailInstructions": "If you didn't receive password reset e-mail, please check your junk/spam folder.",
+      "loginLink": "Return to login page"
+    },
+    "change": {
+      "title": "Welcome to Flexways!",
+      "headline": "Please update your current password.",
+      "newPasswordInput": "New password",
+      "confirmPasswordInput": "Confirm password",
+      "changePassword": "Save password",
+      "passwordRule": "Your password must be at least 8 characters long and include at least one upper-case letter, a number and a special character.",
+      "msg": {
+        "passwordChanged": "Password updated successfully.",
+        "passwordMismatch": "Passwords do not match. Please re-type your password.",
+        "sameAsOld": "Your password must differ from your current password.",
+        "tokenInvalid": "Could not change password because your link is no longer valid. Please generate new password reset link.",
+        "unknownError": "Password change not possible. Something went wrong."
+      }
+    },
+    "resetTokenExpired": {
+      "title": "Your password change link has expired",
+      "headline": "Please check your email for a more recent password change link or return to the login page and generate another link.",
+      "backToLogin": "Return to login page"
+    }
+  },
+  "seasonCalendar": {
+    "title": "Calendar",
+    "listView": {
+      "title": "List view",
+      "occurrence": "Occurrence",
+      "days": "Days"
+    },
+    "dayOfWeek": {
+      "MONDAY": "Mon",
+      "TUESDAY": "Tue",
+      "WEDNESDAY": "Wed",
+      "THURSDAY": "Thu",
+      "FRIDAY": "Fri",
+      "SATURDAY": "Sat",
+      "SUNDAY": "Sun"
+    }
+  },
+  "crew": {
+    "title": "Boarding crew list",
+    "boarding": {
+      "title": "All crew members list",
+      "voyageLegs": "Crew members assigned for voyagelegs",
+      "filter": {
+        "label": {
+          "memberDetails": "Member details",
+          "memberDetailsPlaceholder": "i.e. surname, first name, document id",
+          "selectPlaceholder": "All",
+          "position": "Position",
+          "transportation": "Transportation"
+        }
+      },
+      "list": {
+        "label": {
+          "lastName": "Surname",
+          "firstName": "First name",
+          "position": "Position",
+          "birthDate": "Date of birth",
+          "gender": "Gender",
+          "nationality": "Nationality",
+          "documentType": "Document type",
+          "documentNumber": "Document id",
+          "transportation": "Transportation",
+          "voyageLegs": "Voyage legs",
+          "assignedCrew": "Assigned crew",
+          "voyageLegCount": "voyage leg(s)"
+        },
+        "button": {
+          "assignToVoyageLegs": "Assign to voyage legs"
+        }
+      }
+    },
+    "assign": {
+      "title": "Assign crew members to voyage legs",
+      "button": {
+        "assign": "Assign"
+      },
+      "message": {
+        "success": "Voyage legs have been succesfully assigned to crew members",
+        "error": "Could not assign voyage legs to crew members",
+        "noCommonTransportation": "There were no common transportations for chosen crew"
+      }
+    },
+    "unassign": {
+      "title": "Assigned to voyage legs",
+      "button": {
+        "unassign": "Unassign"
+      },
+      "message": {
+        "success": "Voyage legs have been succesfully unassigned from crew member",
+        "error": "Could not unassign voyage legs from crew member"
+      }
+    },
+    "voyageLegCrewMember": {
+      "crewMembersForVoyageLegTitle": "Crew members list",
+      "status": "Status",
+      "true": "Assigned",
+      "false": "Not assigned",
+      "filterPlaceholder": "Enter crew member name or ID number...",
+      "summary": "Summary",
+      "route": "ROUTE",
+      "std": "STD",
+      "sta": "STA",
+      "transportation": "TRANSPORTATION",
+      "crewMembers": "CREW MEMBERS",
+      "total": "TOTAL",
+      "assigned": "ASSIGNED",
+      "unassigned": "UNASSIGNED",
+      "assign": {
+        "message": {
+          "success": "Crew members have been successfully assigned to voyage leg",
+          "error": "Could not assign crew members to voyage leg"
+        }
+      },
+      "unassign": {
+        "message": {
+          "success": "Crew members have been successfully unassigned from voyage leg",
+          "error": "Could not unassign crew members from voyage leg"
+        }
+      }
+    }
+  },
+  "camera": {
+    "label": "Camera",
+    "selectDevice": "Select device:",
+    "barcodeScanningError": "Can not read the code, please try again",
+    "noDevicesError": "Can not find camera"
+  },
+  "priceList": {
+    "button": {
+      "export": "Export"
+    },
+    "label": {
+      "companyName": "Company name",
+      "outwardRoute": "Outward route",
+      "season": "Season",
+      "priceList": "Price list",
+      "validityPeriod": "Validity period",
+      "priceListsTitle": "Price lists",
+      "exportTab": "I want to export price list",
+      "importTab": "I want to import price list",
+      "none": "None"
+    },
+    "message": {
+      "exportFailed": "Could not export prices.",
+      "noMatchingPrices": "No matching prices available.",
+      "noValue": "Please enter a value."
+    }
+  },
+  "priceImport": {
+    "label": {
+      "import": "Import",
+      "title": "Import price list file",
+      "selectFile": "Select excel file"
+    },
+    "message": {
+      "succeeded": "Prices were successfully imported.",
+      "failed": "Could not import prices. Please check upload log!",
+      "corruptedFile": "Uploaded file is corrupted! Import failed with message: ",
+      "fatalError": "Unexpected error during import, please check browser and server side logs!"
+    }
+  }
+}
