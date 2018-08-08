@@ -42,11 +42,17 @@ namespace JsonExcel
               <button id='LoadJsonFile' label='Load JSON-File' onAction='OnButtonPressed_LoadJsonFile'/>
               <button id='SaveAsJson' label='Save as JSON-File' onAction='OnButtonPressed_SaveAsJson'/>
               <button id='Parse' label='Parse to JSON' onAction='OnButtonPressed_ParseToJson'/>
+              <button id='Info' label='Info' onAction='OnButtonPressed_ShowInfo'/>
             </group >
           </tab>
         </tabs>
       </ribbon>
     </customUI>";
+		}
+
+		public void OnButtonPressed_ShowInfo(IRibbonControl control)
+		{
+			MessageBox.Show("JsonExcel-AddIn (c) Tjark Onnen", "JsonExcel-AddIn-Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		/// <summary>
@@ -69,12 +75,25 @@ namespace JsonExcel
 				return;
 			}
 			string jsonText = root.ToJsonString();
-			JObject jsonObj = JObject.Parse(jsonText);
-			this._gapToShowValuesInSameColumn = jsonObj.FindMaxDepth();
-			int rowNumber = 1;
-			foreach (KeyValuePair<string, JToken> jsonToken in jsonObj)
+			if (String.IsNullOrWhiteSpace(jsonText))
 			{
-				rowNumber = ShowTokenInSheet(jsonToken.Value, rowNumber, 2, new List<string> { jsonToken.Key });
+				MessageBox.Show("Error: No Data to parse.");
+				return;
+			}
+			try
+			{
+				JObject jsonObj = JObject.Parse(jsonText);
+				this._gapToShowValuesInSameColumn = jsonObj.FindMaxDepth();
+				int rowNumber = 1;
+				foreach (KeyValuePair<string, JToken> jsonToken in jsonObj)
+				{
+					rowNumber = ShowTokenInSheet(jsonToken.Value, rowNumber, 2, new List<string> { jsonToken.Key });
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: Could not Show Json in Excel: " + ex.Message);
+				return;
 			}
 		}
 
@@ -107,9 +126,14 @@ namespace JsonExcel
 					return;
 				}
 				string jsonText = root.ToJsonString();
-				JObject o = JObject.Parse(jsonText);
+				if (String.IsNullOrWhiteSpace(jsonText))
+				{
+					MessageBox.Show("Error: No Data to parse. No File was saved.");
+					return;
+				}
 				try
 				{
+					JObject o = JObject.Parse(jsonText);
 					File.WriteAllText(saveFileDialog.FileName, o.ToString());
 					this._lastPath = Path.GetDirectoryName(saveFileDialog.FileName);
 				}

@@ -39,8 +39,9 @@ namespace JsonExcel
 			}
 			return jsonObj;
 		}
+
 		/// <summary>
-		/// 
+		/// Find the maximum depth of branches in Json.
 		/// </summary>
 		/// <param name="jsonObject"></param>
 		/// <returns></returns>
@@ -91,6 +92,9 @@ namespace JsonExcel
 
 		private static string GetJsonStringFromBranch(Branch br, int depth)
 		{
+			if (br == null || String.IsNullOrWhiteSpace(br.Value))
+				return "";
+
 			StringBuilder sb = new StringBuilder(new String(' ', depth * 2));
 			if (!String.IsNullOrWhiteSpace(br.Name))
 			{
