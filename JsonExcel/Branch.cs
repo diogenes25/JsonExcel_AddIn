@@ -5,11 +5,17 @@ using System.Text;
 
 namespace JsonExcel
 {
+	/// <summary>
+	/// Branch (a part of the Json-Tree-Structure)
+	/// </summary>
 	public class Branch
 	{
 		private string _name = "";
 		private Branch _parent = null;
 
+		/// <summary>
+		/// Name of Json-Property
+		/// </summary>
 		public string Name
 		{
 			get { return this._name; }
@@ -22,8 +28,20 @@ namespace JsonExcel
 			}
 		}
 
+		/// <summary>
+		/// Value of Property.
+		/// </summary>
+		/// <remarks>
+		/// If this value is set no children should be set.
+		/// </remarks>
 		public string Value { get; set; }
 
+		/// <summary>
+		/// Parent Branch
+		/// </summary>
+		/// <remarks>
+		/// If a Parent is set, this Branch will be set as a child to the Parent-Branch.
+		/// </remarks>
 		public Branch Parent
 		{
 			get { return this._parent; }
@@ -40,8 +58,18 @@ namespace JsonExcel
 			}
 		}
 
+		/// <summary>
+		/// Children-Branches of this branch.
+		/// </summary>
+		/// <remarks>
+		/// this.Value should not be set.
+		/// </remarks>
 		public List<Branch> Children { get; } = new List<Branch>();
 
+		/// <summary>
+		/// Branch (Property of a Json-File)
+		/// </summary>
+		/// <param name="name"></param>
 		public Branch(string name)
 		{
 			this.Name = name;
@@ -53,7 +81,7 @@ namespace JsonExcel
 			sb.Append(this.Name);
 			if (String.IsNullOrWhiteSpace(this.Value))
 			{
-				foreach (Branch c in Children)
+				foreach (Branch c in this.Children)
 				{
 					sb.Append(c.ToString());
 				}
@@ -65,6 +93,11 @@ namespace JsonExcel
 			return sb.ToString();
 		}
 
+		/// <summary>
+		/// Check equal.
+		/// </summary>
+		/// <param name="obj"></param>
+		/// <returns></returns>
 		public override bool Equals(object obj)
 		{
 			if (obj is Branch)
@@ -76,6 +109,10 @@ namespace JsonExcel
 				return false;
 		}
 
+		/// <summary>
+		/// Get HashCode.
+		/// </summary>
+		/// <returns></returns>
 		public override int GetHashCode()
 		{
 			int hash = this.Parent == null ? 0 : this._parent.Name.GetHashCode();
