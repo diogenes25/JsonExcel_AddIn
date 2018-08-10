@@ -1,9 +1,9 @@
 # JsonExcel
 
 
-## Bearbeiten von JSON-Dateien inkl. dire Json-Struktur. 
+## Bearbeiten von JSON-Dateien inkl. der Json-Struktur. 
 
-![Json erstellen]( JsonExcel_AddIn/Doc/JsonExcel/Video/WebM/JsonExcel.webm)
+![Json erstellen](https://raw.githubusercontent.com/diogenes25/JsonExcel_AddIn/master/Doc/JsonExcel/Video/WebM/JsonExcel.webm)
 
 |   |   A    |   B    |      C    |    D       | E |   F     |
 |---|--------|--------|-----------|------------|:-:|---------|
