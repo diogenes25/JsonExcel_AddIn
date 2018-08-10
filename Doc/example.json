@@ -1,0 +1,15 @@
+{
+	"family" : {
+		"father" : {
+			"name" : "Homer",
+			"profession" : "Operator in nuclear power station",
+			"Interests": {
+				"beer" : "Duff Beer",
+				"food" : "Donut"
+			}
+		},
+		"mother" : {
+			"name" : "Marge"
+		}
+	}
+}

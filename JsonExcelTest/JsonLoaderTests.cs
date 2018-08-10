@@ -83,7 +83,7 @@ namespace JsonExcel
 				}
 				catch (Exception ex)
 				{
-					Assert.Fail("An Exception occoured while add new Branch to Branch");
+					Assert.Fail("An Exception occoured while add new Branch to Branch: " + ex.Message);
 				}
 			}
 		}

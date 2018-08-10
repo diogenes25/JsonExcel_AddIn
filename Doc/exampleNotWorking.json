@@ -1,0 +1,19 @@
+{
+	"family" : {
+		"father" : {
+			"name" : "Homer",
+			"profession" : "Operator in nuclear power station",
+			"favorite beer" : "Duff Beer"
+		},
+		"mother" : {
+			"name" : "Marge",
+			"siblings" : [
+				{ "Name" : "Selma", "Lastname" : "Bouvier" },
+				{ "Name" : "Patty", "Lastname" : "Bouvier" }
+			]
+		}
+	},
+	"Additional Data" : [
+		"Bla", "Blubb"
+	]
+}

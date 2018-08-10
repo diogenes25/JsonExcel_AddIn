@@ -52,7 +52,7 @@ namespace JsonExcel
 
 		public void OnButtonPressed_ShowInfo(IRibbonControl control)
 		{
-			MessageBox.Show("JsonExcel-AddIn (c) Tjark Onnen", "JsonExcel-AddIn-Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show("JsonExcel-AddIn Ver. 1.0", "JsonExcel-AddIn-Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		/// <summary>
@@ -244,32 +244,11 @@ namespace JsonExcel
 			return Show_3_ValuePart(token, lineCount);
 		}
 
-		private string Show_3_ValuePart(JToken token, int lineCount)
-		{
-			string childNode = token.ToString();
-			Excel.Range ran = this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn + 2];
-			ran.Value2 = childNode;
-			ran.Interior.Color = VALUEPART_BACKCOLOR;
-			ran.Font.Color = VALUEPART_FONTCOLOR;
-			return childNode;
-		}
-
-		private void Show_2_KeyPart(int lineCount, int depth, List<string> keys)
-		{
-			Excel.Range ran = this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn];
-			ran.Value2 = $"[{keys[depth - 2]}]";
-			ran.Interior.Color = Color.LightGreen;
-			ran.Font.Color = Color.Black;
-
-			ran = this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn + 1];
-			ran.Value2 = ":";
-		}
-
 		private void Show_1_StructurePart_1(int lineCount, int depth, List<string> keys)
 		{
 			for (int i = 0; i < depth - 2; i++)
 			{
-				Excel.Range ran = this._activeWorksheet.Cells[lineCount, i + 1];
+				Excel.Range ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, i + 1];
 				ran.Value2 = $"[{keys[i]}]";
 				ran.Interior.Color = STRUCTUREPART_BACKCOLOR;
 				ran.Font.Color = STRUCTUREPART_FONTCOLOR;
@@ -277,5 +256,27 @@ namespace JsonExcel
 			Excel.Range clearRange = this._activeWorksheet.Range[this._activeWorksheet.Cells[lineCount, depth - 1], this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn - 1]];
 			clearRange.Clear();
 		}
+
+		private void Show_2_KeyPart(int lineCount, int depth, List<string> keys)
+		{
+			Excel.Range ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn];
+			ran.Value2 = $"[{keys[depth - 2]}]";
+			ran.Interior.Color = KEYPART_BACKCOLOR;
+			ran.Font.Color = KEYPART_FONTCOLOR;
+
+			ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn + 1];
+			ran.Value2 = ":";
+		}
+
+		private string Show_3_ValuePart(JToken token, int lineCount)
+		{
+			string childNode = token.ToString();
+			Excel.Range ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn + 2];
+			ran.Value2 = childNode;
+			ran.Interior.Color = VALUEPART_BACKCOLOR;
+			ran.Font.Color = VALUEPART_FONTCOLOR;
+			return childNode;
+		}
+
 	}
 }
