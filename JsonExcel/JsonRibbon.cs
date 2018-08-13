@@ -1,11 +1,13 @@
 ﻿using ExcelDna.Integration;
 using ExcelDna.Integration.CustomUI;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -15,17 +17,7 @@ namespace JsonExcel
 	[ComVisible(true)]
 	public class JsonRibbon : ExcelRibbon
 	{
-		#region CONST-Values
-
-		private static readonly Color STRUCTUREPART_FONTCOLOR = Color.Black;
-		private static readonly Color STRUCTUREPART_BACKCOLOR = Color.LightGray;
-		private static readonly Color KEYPART_FONTCOLOR = Color.Black;
-		private static readonly Color KEYPART_BACKCOLOR = Color.LightGreen;
-		private static readonly Color VALUEPART_FONTCOLOR = Color.Red;
-		private static readonly Color VALUEPART_BACKCOLOR = Color.Yellow;
-
-		#endregion CONST-Values
-
+	
 		private Excel.Application _app;
 		private Excel.Worksheet _activeWorksheet;
 		private string _lastPath = "c:\\";
@@ -34,25 +26,36 @@ namespace JsonExcel
 		public override string GetCustomUI(string RibbonID)
 		{
 			return @"
-      <customUI xmlns='http://schemas.microsoft.com/office/2006/01/customui'>
-      <ribbon>
-        <tabs>
-          <tab id='JsonTab' label='JSON'>
-            <group id='jsonGrp' label='JSON File'>
-              <button id='LoadJsonFile' label='Load JSON-File' onAction='OnButtonPressed_LoadJsonFile'/>
-              <button id='SaveAsJson' label='Save as JSON-File' onAction='OnButtonPressed_SaveAsJson'/>
-              <button id='Parse' label='Parse to JSON' onAction='OnButtonPressed_ParseToJson'/>
-              <button id='Info' label='Info' onAction='OnButtonPressed_ShowInfo'/>
-            </group >
-          </tab>
-        </tabs>
-      </ribbon>
-    </customUI>";
+<customUI xmlns='http://schemas.microsoft.com/office/2006/01/customui'>
+	<ribbon>
+		<tabs>
+			<tab id='JsonTab' label='JSON'>
+				<group id='jsonGrp' label='JSON File'>
+					<button id='LoadJsonFile' label='Import JSON' onAction='OnButtonPressed_LoadJsonFile' size='large' visible='true' imageMso='ImportXmlFile' />
+					<button id='SaveAsJson' label='Export as JSON' onAction='OnButtonPressed_SaveAsJson' size='large' visible='true' imageMso='ExportTextFile' />
+					<button id='Parse' label='Parse' onAction='OnButtonPressed_ParseToJson' size='large' visible='true' imageMso='FileCompatibilityChecker' />
+					<button id='Info' label='Info' onAction='OnButtonPressed_ShowInfo' />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>";
+		}
+
+		private static T GetAssemblyInfo<T>() where T : class
+		{
+			return (T)Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(T), false).FirstOrDefault();
 		}
 
 		public void OnButtonPressed_ShowInfo(IRibbonControl control)
 		{
-			MessageBox.Show("JsonExcel-AddIn Ver. 1.0", "JsonExcel-AddIn-Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show(
+				   string.Format("{0}\n{1}\n{2}",
+					   GetAssemblyInfo<AssemblyTitleAttribute>().Title,
+					   GetAssemblyInfo<AssemblyFileVersionAttribute>().Version,
+					   GetAssemblyInfo<AssemblyCopyrightAttribute>().Copyright),
+				   "ExcelJsonTable",
+				   MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		/// <summary>
@@ -67,17 +70,17 @@ namespace JsonExcel
 			Branch root = null;
 			try
 			{
-				root = ParseSheetToBranch();
+				root = ExcelJsonShow.ParseSheetToBranch(this._activeWorksheet);
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Error: Could not parse Data. Original error: " + ex.Message);
+				MessageBox.Show("Error: Could not parse Data. Original error: " + ex.Message, "Parse", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			string jsonText = root.ToJsonString();
 			if (String.IsNullOrWhiteSpace(jsonText))
 			{
-				MessageBox.Show("Error: No Data to parse.");
+				MessageBox.Show("Error: No Data to parse.", "Parse", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			try
@@ -87,12 +90,12 @@ namespace JsonExcel
 				int rowNumber = 1;
 				foreach (KeyValuePair<string, JToken> jsonToken in jsonObj)
 				{
-					rowNumber = ShowTokenInSheet(jsonToken.Value, rowNumber, 2, new List<string> { jsonToken.Key });
+					rowNumber = ExcelJsonShow.ShowTokenInSheet(jsonToken.Value, rowNumber, 2, new List<string> { jsonToken.Key }, this._activeWorksheet, this._gapToShowValuesInSameColumn);
 				}
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Error: Could not Show Json in Excel: " + ex.Message);
+				MessageBox.Show("Error: Could not Show Json in Excel: " + ex.Message, "Parse", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 		}
@@ -118,17 +121,24 @@ namespace JsonExcel
 				Branch root = null;
 				try
 				{
-					root = ParseSheetToBranch();
+					root = ExcelJsonShow.ParseSheetToBranch(this._activeWorksheet);
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show("Error: Could not parse Data. File not saved. Original error: " + ex.Message);
+					MessageBox.Show("Error: Could not parse Data. File not saved. Original error: " + ex.Message, "Export", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
+
+				if (root == null || !root.Children.Any())
+				{
+					MessageBox.Show("No Data", "Export", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
 				string jsonText = root.ToJsonString();
 				if (String.IsNullOrWhiteSpace(jsonText))
 				{
-					MessageBox.Show("Error: No Data to parse. No File was saved.");
+					MessageBox.Show("Error: No Data to parse. No File was saved.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
 				try
@@ -139,7 +149,7 @@ namespace JsonExcel
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show("Error: Could not save file to disk. Original error: " + ex.Message);
+					MessageBox.Show("Error: Could not save file to disk. Original error: " + ex.Message, "Export", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 		}
@@ -155,7 +165,9 @@ namespace JsonExcel
 				InitialDirectory = this._lastPath,
 				Filter = "Json files (*.json)|*.json|txt files (*.txt)|*.txt|All files (*.*)|*.*",
 				FilterIndex = 1,
-				RestoreDirectory = true
+				RestoreDirectory = true,
+				Multiselect = false,
+				Title = "Select a file to import"
 			};
 
 			this._app = (Excel.Application)ExcelDnaUtil.Application;
@@ -171,7 +183,7 @@ namespace JsonExcel
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show(ex.Message);
+					MessageBox.Show(ex.Message, "Import", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
 
@@ -180,103 +192,11 @@ namespace JsonExcel
 				int rowNumber = 1;
 				foreach (KeyValuePair<string, JToken> jsonToken in jsonObj)
 				{
-					rowNumber = ShowTokenInSheet(jsonToken.Value, rowNumber, 2, new List<string> { jsonToken.Key });
+					rowNumber = ExcelJsonShow.ShowTokenInSheet(jsonToken.Value, rowNumber, 2, new List<string> { jsonToken.Key }, this._activeWorksheet, this._gapToShowValuesInSameColumn);
 				}
 			}
 		}
 
-		private Branch ParseSheetToBranch()
-		{
-			Branch root = new Branch("");
-
-			for (int i = 1; i <= 5000; i++)
-			{
-				Excel.Range line = this._activeWorksheet.Cells.Range[this._activeWorksheet.Cells[i, 1], this._activeWorksheet.Cells[i, 50]];
-				string[] strArrayFromExcelRow = line.Cells.Cast<Excel.Range>().Select(x => (string)x.Text).Where(x => !(String.IsNullOrWhiteSpace(x))).ToArray<string>();
-				if (!strArrayFromExcelRow.Any())
-					break;
-				try
-				{
-					Branch br = root.AddNewBranch(strArrayFromExcelRow);
-				}
-				catch (Exception ex)
-				{
-					throw JsonExcelException.ParseBranchException($"Error: Line {i} could not parsed", ex);
-				}
-			}
-			return root;
-		}
-
-		private int ShowTokenInSheet(JToken token, int rowNumber, int depth, List<string> jsonStructure)
-		{
-			if (token == null)
-				return rowNumber;
-			string childNode = "";
-			if (token is JValue)
-			{
-				childNode = ShowRowInSheet(token, rowNumber, depth, jsonStructure);
-				rowNumber++;
-			}
-			else if (token is JObject obj)
-			{
-				foreach (var property in obj.Properties())
-				{
-					childNode = property.Name;
-					if (jsonStructure.Count() < depth)
-					{
-						jsonStructure.Add(childNode);
-					}
-					else
-					{
-						jsonStructure[depth - 1] = childNode;
-					}
-					rowNumber = ShowTokenInSheet(property.Value, rowNumber, depth + 1, jsonStructure);
-				}
-			}
-
-			return rowNumber;
-		}
-
-		private string ShowRowInSheet(JToken token, int lineCount, int depth, List<string> keys)
-		{
-			Show_1_StructurePart_1(lineCount, depth, keys);
-			Show_2_KeyPart(lineCount, depth, keys);
-			return Show_3_ValuePart(token, lineCount);
-		}
-
-		private void Show_1_StructurePart_1(int lineCount, int depth, List<string> keys)
-		{
-			for (int i = 0; i < depth - 2; i++)
-			{
-				Excel.Range ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, i + 1];
-				ran.Value2 = $"[{keys[i]}]";
-				ran.Interior.Color = STRUCTUREPART_BACKCOLOR;
-				ran.Font.Color = STRUCTUREPART_FONTCOLOR;
-			}
-			Excel.Range clearRange = this._activeWorksheet.Range[this._activeWorksheet.Cells[lineCount, depth - 1], this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn - 1]];
-			clearRange.Clear();
-		}
-
-		private void Show_2_KeyPart(int lineCount, int depth, List<string> keys)
-		{
-			Excel.Range ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn];
-			ran.Value2 = $"[{keys[depth - 2]}]";
-			ran.Interior.Color = KEYPART_BACKCOLOR;
-			ran.Font.Color = KEYPART_FONTCOLOR;
-
-			ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn + 1];
-			ran.Value2 = ":";
-		}
-
-		private string Show_3_ValuePart(JToken token, int lineCount)
-		{
-			string childNode = token.ToString();
-			Excel.Range ran = (Excel.Range)this._activeWorksheet.Cells[lineCount, this._gapToShowValuesInSameColumn + 2];
-			ran.Value2 = childNode;
-			ran.Interior.Color = VALUEPART_BACKCOLOR;
-			ran.Font.Color = VALUEPART_FONTCOLOR;
-			return childNode;
-		}
-
+	
 	}
 }

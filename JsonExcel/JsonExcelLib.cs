@@ -92,7 +92,7 @@ namespace JsonExcel
 
 		private static string GetJsonStringFromBranch(Branch br, int depth)
 		{
-			if (br == null || String.IsNullOrWhiteSpace(br.Value))
+			if (br == null) // || String.IsNullOrWhiteSpace(br.Value))
 				return "";
 
 			StringBuilder sb = new StringBuilder(new String(' ', depth * 2));

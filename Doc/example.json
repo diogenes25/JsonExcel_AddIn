@@ -2,7 +2,7 @@
 	"family" : {
 		"father" : {
 			"name" : "Homer",
-			"profession" : "Operator in nuclear power station",
+			"profession" : "Operator",
 			"Interests": {
 				"beer" : "Duff Beer",
 				"food" : "Donut"
