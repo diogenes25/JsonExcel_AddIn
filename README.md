@@ -2,11 +2,11 @@
 Dieses AddIn dient der Darstellung *eines* JSON-Objektes in Excel.
 Dabei werden die Name/Wert Paare in einer gemeinsamen Spalte angezeigt, während die Json-Struktur in den Spalten davor angezeigt werden.
 
-![alt text](https://raw.githubusercontent.com/diogenes25/JsonExcel_AddIn/master/Doc/images/JsonExcelRibbon.PNG)
+![JsonExcel Ribbon](https://raw.githubusercontent.com/diogenes25/JsonExcel_AddIn/master/Doc/images/JsonExcelRibbon.PNG)
 
 
-1. [Arbeitsweise] (##arbeitsweise)
-2. [Erstellen von JSON-Objekten] (##Erstellen von JSON-Objekten)
+1. [Arbeitsweise](##arbeitsweise)
+2. [Erstellen von JSON-Objekten](##Erstellen_von_JSON-Objekten)
 
 ## Arbeitsweise
 Im Gegensatz zu den bisherigen Excel-AddIns konzentriert sich dieses AddIn mehr auf die Json-Struktur, statt auf wiederkehrende Daten.
@@ -39,6 +39,8 @@ Die Struktur des Json-Objektes wird beibehalten indem jedes Name/Wert Paar in ei
 | 3 |[family]|[father]|[interests]|[beer]      | : |Duff Beer|
 | 3 |[family]|[father]|[interests]|[food]      | : |Donut    |
 | 4 |[family]|[mother]|           |[name]      | : |Marge    |
+
+![Excel vs. Json view](https://raw.githubusercontent.com/diogenes25/JsonExcel_AddIn/master/Doc/images/ExcelAndVim.PNG)
 
 ## Erstellen von JSON-Objekten
 Jede Zeile muss ein Name:Wert - Paar enthalten.
