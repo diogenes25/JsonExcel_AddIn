@@ -2,6 +2,9 @@
 Dieses AddIn dient der Darstellung *eines* JSON-Objektes in Excel.
 Dabei werden die Name/Wert Paare in einer gemeinsamen Spalte angezeigt, während die Json-Struktur in den Spalten davor angezeigt werden.
 
+![alt text](https://raw.githubusercontent.com/diogenes25/JsonExcel_AddIn/master/Doc/images/JsonExcelRibbon.PNG)
+
+
 1. [Arbeitsweise] (##arbeitsweise)
 2. [Erstellen von JSON-Objekten] (##Erstellen von JSON-Objekten)
 
